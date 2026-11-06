@@ -1,0 +1,761 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #09090b;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.14) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(168, 85, 247, 0.08) 0px, transparent 60%),
+      radial-gradient(at 0% 100%, rgba(56, 189, 248, 0.10) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.12) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* ==========================================================================
+   PERFECT LIGHT MODE SYSTEM
+   Crystal clear contrast, elegant clean cards, readable text everywhere
+   ========================================================================== */
+
+html.light {
+  color-scheme: light;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Body & Backgrounds */
+html.light body {
+  background-color: #fafafa !important;
+  color: #0f172a !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.06) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(168, 85, 247, 0.04) 0px, transparent 60%),
+    radial-gradient(at 0% 100%, rgba(56, 189, 248, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.06) 0px, transparent 50%) !important;
+}
+
+/* Global Light Surface Conversions */
+html.light section {
+  background-color: transparent !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light .bg-zinc-950 {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-zinc-900,
+html.light [class*="bg-zinc-900"] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-zinc-850,
+html.light .bg-zinc-800,
+html.light [class*="bg-zinc-800"] {
+  background-color: #f1f5f9 !important;
+}
+
+html.light [class*="border-zinc-800"],
+html.light [class*="border-zinc-850"],
+html.light [class*="border-zinc-700"] {
+  border-color: #e2e8f0 !important;
+}
+
+/* Typography Light Overrides with High Contrast */
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-zinc-100 {
+  color: #1e293b !important;
+}
+
+html.light .text-zinc-200 {
+  color: #334155 !important;
+}
+
+html.light .text-zinc-300 {
+  color: #475569 !important;
+}
+
+html.light .text-zinc-400 {
+  color: #64748b !important;
+}
+
+html.light .text-zinc-500 {
+  color: #94a3b8 !important;
+}
+
+html.light .text-zinc-600 {
+  color: #cbd5e1 !important;
+}
+
+/* High-Contrast Accessible Accents in Light Mode */
+html.light .text-indigo-400 {
+  color: #4f46e5 !important;
+}
+
+html.light .text-emerald-400 {
+  color: #059669 !important;
+}
+
+html.light .text-sky-400 {
+  color: #0284c7 !important;
+}
+
+html.light .text-amber-400 {
+  color: #d97706 !important;
+}
+
+/* Header & Navigation Bar (Deep Luminous Royal Blue & Indigo Glass Gradient) */
+html.light header {
+  background: linear-gradient(90deg, 
+    rgba(219, 234, 254, 0.98) 0%, 
+    rgba(224, 231, 255, 0.97) 50%, 
+    rgba(237, 233, 254, 0.98) 100%
+  ) !important;
+  backdrop-filter: blur(24px) saturate(200%) !important;
+  border-bottom: 2px solid rgba(165, 180, 252, 0.85) !important;
+  box-shadow: 
+    inset 0 -1px 0 rgba(255, 255, 255, 0.8),
+    0 4px 24px -2px rgba(79, 70, 229, 0.18),
+    0 2px 8px -1px rgba(14, 165, 233, 0.10) !important;
+}
+
+html.light header .bg-zinc-950\/85 {
+  background: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.16) !important;
+  border: 1.5px solid rgba(165, 180, 252, 0.9) !important;
+}
+
+html.light #nav-brand-name {
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+html.light nav {
+  gap: 1.75rem !important; /* exactly matches dark mode gap-7 */
+}
+
+html.light nav a {
+  color: #334155 !important;
+  font-weight: 500 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  transition: color 0.2s ease !important;
+}
+
+html.light nav a:hover {
+  color: #4338ca !important;
+  background: transparent !important;
+  text-decoration: underline !important;
+  text-underline-offset: 8px !important;
+  text-decoration-color: #818cf8 !important;
+}
+
+html.light #mobile-nav-drawer {
+  background: linear-gradient(180deg, rgba(224, 231, 255, 0.98) 0%, rgba(219, 234, 254, 0.98) 100%) !important;
+  backdrop-filter: blur(24px) saturate(200%) !important;
+  border-bottom: 2px solid rgba(165, 180, 252, 0.9) !important;
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.18) !important;
+}
+
+html.light .mobile-nav-link {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1.5px solid rgba(199, 210, 254, 0.9) !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.06) !important;
+}
+
+html.light .mobile-nav-link:hover {
+  background: #e0e7ff !important;
+  color: #3730a3 !important;
+  border-color: #6366f1 !important;
+}
+
+/* Buttons in Header & Hero */
+html.light #btn-theme-toggle,
+html.light #btn-toggle-lang,
+html.light #btn-mobile-menu {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1.5px solid rgba(165, 180, 252, 0.9) !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.10) !important;
+}
+
+html.light #btn-theme-toggle:hover,
+html.light #btn-toggle-lang:hover,
+html.light #btn-mobile-menu:hover {
+  background: #ffffff !important;
+  border-color: #6366f1 !important;
+  color: #4338ca !important;
+}
+
+html.light #btn-open-resume,
+html.light #btn-open-resume-mobile {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(49, 46, 129, 0.3) !important;
+}
+
+html.light #btn-open-resume:hover,
+html.light #btn-open-resume-mobile:hover {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%) !important;
+  box-shadow: 0 6px 16px rgba(49, 46, 129, 0.45) !important;
+}
+
+/* Hero Section (Rich Deep Indigo, Sapphire & Amethyst Multi-Layer Gradient) */
+html.light #about {
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 90% 12%, rgba(14, 165, 233, 0.32) 0%, transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(168, 85, 247, 0.26) 0%, transparent 50%),
+    radial-gradient(circle at 75% 65%, rgba(244, 114, 182, 0.22) 0%, transparent 42%),
+    linear-gradient(135deg, #c7d2fe 0%, #dbeafe 30%, #e0e7ff 65%, #ede9fe 100%) !important;
+  border-bottom: 2px solid rgba(165, 180, 252, 0.85) !important;
+  position: relative;
+}
+
+html.light #hero-headline {
+  color: #0f172a !important;
+}
+
+html.light #hero-headline span {
+  background: linear-gradient(135deg, #312e81 0%, #0369a1 45%, #6d28d9 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+html.light #hero-title {
+  color: #1e1b4b !important;
+  font-weight: 700 !important;
+}
+
+html.light #hero-bio {
+  color: #1e293b !important;
+  font-weight: 500 !important;
+}
+
+html.light #hero-availability {
+  color: #3730a3 !important;
+  font-weight: 700 !important;
+}
+
+html.light #hero-location,
+html.light #about .font-mono.pt-1 span {
+  color: #334155 !important;
+  font-weight: 600 !important;
+}
+
+/* Hero CTA Buttons */
+html.light a[href="#projects"].bg-white {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(99, 102, 241, 0.6) !important;
+  box-shadow: 0 8px 22px -4px rgba(67, 56, 202, 0.42) !important;
+}
+
+html.light a[href="#projects"].bg-white:hover {
+  background: linear-gradient(135deg, #3730a3 0%, #4338ca 100%) !important;
+  box-shadow: 0 10px 26px -4px rgba(67, 56, 202, 0.52) !important;
+  transform: translateY(-1px);
+}
+
+html.light a[href="#projects"].bg-white span,
+html.light a[href="#projects"].bg-white svg {
+  color: #ffffff !important;
+}
+
+html.light a[href="#contact"].bg-zinc-900 {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1e1b4b !important;
+  font-weight: 600 !important;
+  border: 1.5px solid rgba(165, 180, 252, 0.9) !important;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.12) !important;
+}
+
+html.light a[href="#contact"].bg-zinc-900:hover {
+  background: #ffffff !important;
+  border-color: #6366f1 !important;
+  color: #4338ca !important;
+}
+
+html.light a[href="#contact"].bg-zinc-900 svg {
+  color: #4f46e5 !important;
+}
+
+html.light #hero-btn-resume {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1e1b4b !important;
+  font-weight: 600 !important;
+  border: 1.5px solid rgba(165, 180, 252, 0.9) !important;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.12) !important;
+}
+
+html.light #hero-btn-resume:hover {
+  background: #ffffff !important;
+  border-color: #6366f1 !important;
+  color: #4338ca !important;
+}
+
+/* Hero Portrait Card (Keep text over image white!) */
+html.light #about .aspect-square.w-full {
+  background: #09090b !important;
+}
+
+html.light #about .aspect-square .text-white,
+html.light #about .aspect-square #portrait-name {
+  color: #ffffff !important;
+}
+
+html.light #about .aspect-square .text-zinc-400 {
+  color: #cbd5e1 !important;
+}
+
+html.light #about .aspect-square .bg-zinc-900\/90 {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgba(71, 85, 105, 0.6) !important;
+  color: #34d399 !important;
+}
+
+/* Hero Portrait Container & Lower Spec Box */
+html.light #about .rounded-2xl {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1.5px solid rgba(165, 180, 252, 0.9) !important;
+  box-shadow: 0 25px 60px -10px rgba(67, 56, 202, 0.24), 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
+}
+
+html.light #about .rounded-2xl .bg-zinc-900\/60 {
+  background: rgba(248, 250, 252, 0.95) !important;
+  border-top: 1.5px solid rgba(199, 210, 254, 0.9) !important;
+}
+
+html.light #about .rounded-2xl .text-zinc-400 {
+  color: #475569 !important;
+  font-weight: 600 !important;
+}
+
+html.light #about .rounded-2xl .text-zinc-200 {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+/* Social & Shortcut Buttons (GitHub, Codeforces, Facebook) */
+html.light #hero-github-link,
+html.light #hero-codeforces-link,
+html.light #hero-facebook-link {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border: 1.5px solid rgba(165, 180, 252, 0.9) !important;
+  color: #1e293b !important;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.12) !important;
+}
+
+html.light #hero-github-link:hover,
+html.light #hero-codeforces-link:hover,
+html.light #hero-facebook-link:hover {
+  background-color: #ffffff !important;
+  border-color: #6366f1 !important;
+  color: #4338ca !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.22) !important;
+}
+
+html.light #btn-copy-email-hero {
+  color: #1e1b4b !important;
+  font-weight: 600 !important;
+}
+
+html.light #btn-copy-email-hero:hover {
+  color: #4f46e5 !important;
+}
+
+/* Projects Section (Dynamic Cyan & Indigo Aurora Gradient) */
+html.light #projects {
+  background: 
+    radial-gradient(circle at 90% 12%, rgba(14, 165, 233, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 10% 85%, rgba(99, 102, 241, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.12) 0%, transparent 55%),
+    linear-gradient(180deg, #f8fafc 0%, #f0f9ff 35%, #eef2ff 75%, #f8fafc 100%) !important;
+  border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
+  position: relative;
+}
+
+html.light #projects .group.rounded-2xl {
+  background: rgba(255, 255, 255, 0.90) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(199, 210, 254, 0.8) !important;
+  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.10), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+html.light #projects .group.rounded-2xl:hover {
+  border-color: rgba(99, 102, 241, 0.8) !important;
+  box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.22), 0 0 0 1px rgba(99, 102, 241, 0.25) !important;
+  transform: translateY(-2px);
+}
+
+html.light #project-filters {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(199, 210, 254, 0.8) !important;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.08) !important;
+}
+
+html.light .filter-btn {
+  color: #475569 !important;
+}
+
+html.light .filter-btn:hover {
+  color: #4f46e5 !important;
+}
+
+html.light .filter-btn.active {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+}
+
+/* Skills Section (Fresh Emerald & Indigo Tech Gradient) */
+html.light #skills {
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.16) 0%, transparent 50%),
+    radial-gradient(circle at 50% 10%, rgba(14, 165, 233, 0.14) 0%, transparent 50%),
+    linear-gradient(135deg, #f8fafc 0%, #ecfdf5 30%, #f0f9ff 70%, #f5f3ff 100%) !important;
+  border-bottom: 1px solid rgba(167, 243, 208, 0.7) !important;
+  position: relative;
+}
+
+html.light #skills .rounded-2xl {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(199, 210, 254, 0.8) !important;
+  box-shadow: 0 10px 25px -10px rgba(16, 185, 129, 0.10), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+html.light #skills .rounded-2xl:hover {
+  border-color: rgba(52, 211, 153, 0.8) !important;
+  box-shadow: 0 15px 35px -10px rgba(16, 185, 129, 0.20) !important;
+  transform: translateY(-2px);
+}
+
+html.light #skill-search-input {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(199, 210, 254, 0.8) !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06) !important;
+}
+
+html.light #skills .h-1\.5.w-full.bg-zinc-800 {
+  background: #e2e8f0 !important;
+}
+
+html.light #skills .h-1\.5.w-full.bg-zinc-800 > div {
+  background: linear-gradient(90deg, #4f46e5 0%, #0284c7 50%, #10b981 100%) !important;
+}
+
+/* Services Section (Flowing Violet & Indigo Gradient) */
+html.light #services {
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(99, 102, 241, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(244, 114, 182, 0.12) 0%, transparent 45%),
+    linear-gradient(180deg, #f5f3ff 0%, #eef2ff 50%, #f8fafc 100%) !important;
+  border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
+}
+
+html.light #services .rounded-2xl {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(199, 210, 254, 0.8) !important;
+  box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.10) !important;
+}
+
+/* Process Section (Cyan & Indigo Tech Gradient) */
+html.light #process {
+  background: 
+    radial-gradient(circle at 10% 25%, rgba(14, 165, 233, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 90% 75%, rgba(99, 102, 241, 0.16) 0%, transparent 45%),
+    linear-gradient(135deg, #f8fafc 0%, #f0f9ff 40%, #eef2ff 80%, #faf5ff 100%) !important;
+  border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
+}
+
+html.light #process .rounded-2xl {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(199, 210, 254, 0.8) !important;
+  box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.10) !important;
+}
+
+/* Education Section (Purple & Lavender Graduate Gradient) */
+html.light #education,
+html.light #experience {
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.16) 0%, transparent 50%),
+    radial-gradient(circle at 15% 85%, rgba(99, 102, 241, 0.16) 0%, transparent 50%),
+    linear-gradient(180deg, #faf5ff 0%, #eef2ff 45%, #f8fafc 100%) !important;
+  border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
+}
+
+html.light #education .rounded-2xl,
+html.light #experience .rounded-2xl,
+html.light #testimonials-grid .rounded-2xl {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(199, 210, 254, 0.8) !important;
+  box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.10) !important;
+}
+
+/* JS Engine & Sandbox Section (Luminous Cyber-Lab Gradient) */
+html.light #sandbox {
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.20) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 50% 10%, rgba(14, 165, 233, 0.18) 0%, transparent 50%),
+    linear-gradient(135deg, #eef2ff 0%, #f0fdf4 35%, #f0f9ff 70%, #f5f3ff 100%) !important;
+  border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
+  position: relative;
+}
+
+html.light #sandbox .snippet-btn {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(199, 210, 254, 0.8) !important;
+  color: #334155 !important;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06) !important;
+}
+
+html.light #sandbox .snippet-btn:hover {
+  background: #ffffff !important;
+  color: #4f46e5 !important;
+  border-color: #6366f1 !important;
+}
+
+html.light .snippet-btn.active,
+html.light .snippet-btn.bg-zinc-800 {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%) !important;
+  color: #ffffff !important;
+  border-color: #4f46e5 !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3) !important;
+}
+
+/* High-Tech Dark IDE Look with Crisp Code Contrast */
+html.light #sandbox .rounded-2xl.bg-zinc-900 {
+  background: #090d16 !important;
+  border: 1px solid rgba(99, 102, 241, 0.35) !important;
+  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.4), 0 0 0 1px rgba(99, 102, 241, 0.2) !important;
+}
+
+html.light #sandbox .px-4.py-3.bg-zinc-950\/70,
+html.light #sandbox .px-4.py-2\.5.bg-zinc-950\/40 {
+  background: #020617 !important;
+  border-color: #1e293b !important;
+}
+
+html.light #sandbox-textarea {
+  color: #f1f5f9 !important;
+  background: transparent !important;
+}
+
+html.light #sandbox-terminal {
+  background: #020617 !important;
+  color: #f1f5f9 !important;
+}
+
+html.light #sandbox-terminal * {
+  color: #f1f5f9 !important;
+}
+
+html.light #sandbox .text-zinc-400,
+html.light #sandbox .text-zinc-500 {
+  color: #94a3b8 !important;
+}
+
+html.light #btn-run-code {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3) !important;
+}
+
+html.light #btn-run-code * {
+  color: #ffffff !important;
+}
+
+/* Contact Section (Deep Indigo & Sky Aurora Gradient) */
+html.light #contact {
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(14, 165, 233, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.16) 0%, transparent 55%),
+    linear-gradient(135deg, #f8fafc 0%, #eef2ff 30%, #f0f9ff 70%, #faf5ff 100%) !important;
+  border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
+  position: relative;
+}
+
+html.light #contact .rounded-2xl {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(199, 210, 254, 0.8) !important;
+  box-shadow: 0 20px 45px -12px rgba(99, 102, 241, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
+}
+
+html.light #contact input,
+html.light #contact textarea {
+  background: rgba(248, 250, 252, 0.95) !important;
+  border: 1px solid rgba(203, 213, 225, 0.9) !important;
+  color: #0f172a !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+}
+
+html.light #contact input:focus,
+html.light #contact textarea:focus {
+  background: #ffffff !important;
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+
+html.light #btn-submit-contact {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px -4px rgba(79, 70, 229, 0.35) !important;
+}
+
+html.light #btn-submit-contact:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%) !important;
+  box-shadow: 0 10px 24px -4px rgba(79, 70, 229, 0.45) !important;
+}
+
+html.light #btn-submit-contact * {
+  color: #ffffff !important;
+}
+
+/* Footer in Light Mode (Executive Cohesive Ice-Lavender Tech Gradient) */
+html.light footer {
+  background: linear-gradient(180deg, 
+    #f8fafc 0%, 
+    #eef2ff 35%, 
+    #e0e7ff 75%, 
+    #dbeafe 100%
+  ) !important;
+  border-top: 1px solid rgba(199, 210, 254, 0.85) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+html.light footer #footer-name {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+html.light footer .text-zinc-200 {
+  color: #1e293b !important;
+}
+
+html.light footer .text-zinc-400 {
+  color: #475569 !important;
+  font-weight: 500 !important;
+}
+
+html.light footer .text-zinc-500 {
+  color: #64748b !important;
+}
+
+html.light footer a {
+  color: #475569 !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+html.light footer a:hover {
+  color: #4f46e5 !important;
+  transform: translateY(-1px);
+}
+
+html.light #dhaka-clock {
+  color: #312e81 !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(199, 210, 254, 0.9) !important;
+  padding: 3px 8px !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 4px rgba(99, 102, 241, 0.08) !important;
+}
+
+html.light #btn-back-to-top {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(199, 210, 254, 0.9) !important;
+  color: #4338ca !important;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.12) !important;
+}
+
+html.light #btn-back-to-top:hover {
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+  border-color: #4f46e5 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3) !important;
+}
+
+html.light footer .bg-indigo-500\/10 {
+  background: rgba(99, 102, 241, 0.12) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  color: #4f46e5 !important;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.12) !important;
+}
+
+/* Modals */
+html.light #modal-project .bg-zinc-900,
+html.light #modal-resume .bg-zinc-900 {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15) !important;
+}
+
+html.light #modal-project .bg-zinc-950\/60,
+html.light #modal-project .bg-zinc-950\/80,
+html.light #modal-resume .bg-zinc-950\/80 {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
