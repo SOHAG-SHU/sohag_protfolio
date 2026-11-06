@@ -1,3 +1,11 @@
+
+function resolveAsset(url) {
+  if (!url) return "";
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  const clean = url.replace(/^\/?(src\/)?/, "");
+  const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + "/";
+  return base + clean;
+}
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -184,7 +192,7 @@ function renderProjects() {
     return `
         <div class="group rounded-2xl bg-zinc-900/70 border border-zinc-800 hover:border-zinc-700 transition-all overflow-hidden flex flex-col justify-between ${isLarge ? "lg:col-span-12 xl:flex-row" : "lg:col-span-6"}">
           <div class="w-full overflow-hidden bg-zinc-950 relative cursor-pointer project-card-media ${isLarge ? "xl:w-7/12 aspect-[16/10] sm:aspect-[16/9]" : "aspect-video"}" data-project-id="${project.id}">
-            <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
+            <img src="${resolveAsset(project.image)}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"></div>
             <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
               <span class="px-3 py-1.5 text-xs font-mono font-medium text-white bg-zinc-900/90 border border-zinc-700 rounded-md backdrop-blur-sm flex items-center gap-1.5 shadow-lg">
@@ -257,7 +265,7 @@ function openProjectModal(project) {
     meta.innerHTML = `<span>${project.category}</span> \xB7 <span>${project.year}</span> \xB7 <span class="text-indigo-400 font-semibold">${project.role}</span>`;
   }
   const img = document.getElementById("modal-project-img");
-  if (img) img.src = project.image;
+  if (img) img.src = resolveAsset(project.image);
   const title = document.getElementById("modal-project-title");
   if (title) title.textContent = project.title;
   const desc = document.getElementById("modal-project-desc");
