@@ -158,7 +158,7 @@ html.light header {
     rgba(224, 231, 255, 0.97) 50%, 
     rgba(237, 233, 254, 0.98) 100%
   ) !important;
-  backdrop-filter: blur(24px) saturate(200%) !important;
+  backdrop-filter: blur(12px) !important;
   border-bottom: 2px solid rgba(165, 180, 252, 0.85) !important;
   box-shadow: 
     inset 0 -1px 0 rgba(255, 255, 255, 0.8),
@@ -201,7 +201,7 @@ html.light nav a:hover {
 
 html.light #mobile-nav-drawer {
   background: linear-gradient(180deg, rgba(224, 231, 255, 0.98) 0%, rgba(219, 234, 254, 0.98) 100%) !important;
-  backdrop-filter: blur(24px) saturate(200%) !important;
+  backdrop-filter: blur(12px) !important;
   border-bottom: 2px solid rgba(165, 180, 252, 0.9) !important;
   box-shadow: 0 15px 35px rgba(79, 70, 229, 0.18) !important;
 }
@@ -428,16 +428,16 @@ html.light #projects {
 }
 
 html.light #projects .group.rounded-2xl {
-  background: rgba(255, 255, 255, 0.90) !important;
-  backdrop-filter: blur(16px) !important;
+  background: #ffffff !important;
   border: 1px solid rgba(199, 210, 254, 0.8) !important;
-  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.10), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
+  box-shadow: 0 4px 20px -2px rgba(99, 102, 241, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
 html.light #projects .group.rounded-2xl:hover {
   border-color: rgba(99, 102, 241, 0.8) !important;
-  box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.22), 0 0 0 1px rgba(99, 102, 241, 0.25) !important;
-  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -10px rgba(99, 102, 241, 0.20), 0 0 0 1px rgba(99, 102, 241, 0.25) !important;
+  transform: translateY(-3px);
 }
 
 html.light #project-filters {
@@ -472,15 +472,15 @@ html.light #skills {
 }
 
 html.light #skills .rounded-2xl {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(16px) !important;
+  background: #ffffff !important;
   border: 1px solid rgba(199, 210, 254, 0.8) !important;
-  box-shadow: 0 10px 25px -10px rgba(16, 185, 129, 0.10), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
+  box-shadow: 0 4px 16px -2px rgba(16, 185, 129, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
 html.light #skills .rounded-2xl:hover {
   border-color: rgba(52, 211, 153, 0.8) !important;
-  box-shadow: 0 15px 35px -10px rgba(16, 185, 129, 0.20) !important;
+  box-shadow: 0 14px 30px -8px rgba(16, 185, 129, 0.18) !important;
   transform: translateY(-2px);
 }
 
@@ -509,10 +509,10 @@ html.light #services {
 }
 
 html.light #services .rounded-2xl {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(16px) !important;
+  background: #ffffff !important;
   border: 1px solid rgba(199, 210, 254, 0.8) !important;
-  box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.10) !important;
+  box-shadow: 0 4px 16px -2px rgba(99, 102, 241, 0.08) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
 /* Process Section (Cyan & Indigo Tech Gradient) */
@@ -525,10 +525,10 @@ html.light #process {
 }
 
 html.light #process .rounded-2xl {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(16px) !important;
+  background: #ffffff !important;
   border: 1px solid rgba(199, 210, 254, 0.8) !important;
-  box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.10) !important;
+  box-shadow: 0 4px 16px -2px rgba(99, 102, 241, 0.08) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
 /* Education Section (Purple & Lavender Graduate Gradient) */
@@ -544,10 +544,10 @@ html.light #experience {
 html.light #education .rounded-2xl,
 html.light #experience .rounded-2xl,
 html.light #testimonials-grid .rounded-2xl {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(16px) !important;
+  background: #ffffff !important;
   border: 1px solid rgba(199, 210, 254, 0.8) !important;
-  box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.10) !important;
+  box-shadow: 0 4px 16px -2px rgba(99, 102, 241, 0.08) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
 /* JS Engine & Sandbox Section (Luminous Cyber-Lab Gradient) */
@@ -636,10 +636,9 @@ html.light #contact {
 }
 
 html.light #contact .rounded-2xl {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(20px) !important;
+  background: #ffffff !important;
   border: 1px solid rgba(199, 210, 254, 0.8) !important;
-  box-shadow: 0 20px 45px -12px rgba(99, 102, 241, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 16px 36px -10px rgba(99, 102, 241, 0.14), 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
 }
 
 html.light #contact input,
