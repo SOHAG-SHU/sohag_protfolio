@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Md. Sohag | Full-Stack Software Engineer & UI Architect</title>
+    <meta name="description" content="Professional portfolio of Md. Sohag, Full-Stack Software Engineer specializing in modern JavaScript, HTML5, CSS3, React, Node.js, and high-performance web systems." />
+    <meta property="og:title" content="Md. Sohag | Full-Stack Software Engineer Portfolio" />
+    <meta property="og:description" content="Professional portfolio built with pure modern JavaScript, HTML5, and CSS3." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/sohag_protfolio/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      try {
+        if (localStorage.getItem('sohag_portfolio_theme') === 'light') {
+          document.documentElement.classList.add('light');
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/sohag_protfolio/assets/index-DP-lGfZ5.js"></script>
+    <link rel="stylesheet" crossorigin href="/sohag_protfolio/assets/index-CvQQuGXb.css">
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-indigo-500/30 selection:text-indigo-200 min-h-screen flex flex-col">
+    
+    <!-- TOP NAVIGATION BAR (Top Bar Contract: Zone 1 Wordmark, Zone 2 Nav Links, Zone 3 Actions) -->
+    <header class="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-zinc-950/85 backdrop-blur-md">
+      <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 h-16 flex items-center justify-between gap-8">
+        <!-- Zone 1: Professional Developer Monogram & Brand -->
+        <a href="#" class="group flex items-center gap-3 shrink-0 whitespace-nowrap">
+          <div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-indigo-600 to-violet-600 p-[1.5px] shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 group-hover:scale-105 transition-all duration-300">
+            <div class="w-full h-full bg-zinc-950/85 backdrop-blur-sm rounded-[10px] flex items-center justify-center">
+              <svg class="w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 7c0-2-1.8-3.5-4-3.5H9C6.8 3.5 5 5.3 5 7.5c0 2.2 1.8 3.5 4.5 3.5h5c2.7 0 4.5 1.3 4.5 3.5 0 2.2-1.8 4-4 4h-4.5c-2.2 0-4-1.8-4-3.5" />
+                <circle cx="18.5" cy="5.5" r="1.5" fill="#34D399" stroke="none" />
+              </svg>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 leading-none">
+              <span id="nav-brand-name" class="font-bold text-[17px] tracking-tight text-white group-hover:text-indigo-300 transition-colors">Md. Sohag Hossen</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" title="Available for projects"></span>
+            </div>
+            <span class="text-[10px] font-mono tracking-widest text-zinc-400 uppercase font-medium mt-1">Full-Stack Dev</span>
+          </div>
+        </a>
+
+        <!-- Zone 2: Desktop Navigation Links (Visible on Large Screens >= 1024px) -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-zinc-400">
+          <a href="#about" class="hover:text-white transition-colors whitespace-nowrap shrink-0 hover:underline underline-offset-8 decoration-zinc-600" data-i18n="nav-about">About</a>
+          <a href="#projects" class="hover:text-white transition-colors whitespace-nowrap shrink-0 hover:underline underline-offset-8 decoration-zinc-600" data-i18n="nav-projects">Projects</a>
+          <a href="#skills" class="hover:text-white transition-colors whitespace-nowrap shrink-0 hover:underline underline-offset-8 decoration-zinc-600" data-i18n="nav-skills">Skills</a>
+            <a href="#services" class="hover:text-white transition-colors whitespace-nowrap shrink-0 hover:underline underline-offset-8 decoration-zinc-600" data-i18n="nav-services">Services</a>
+            <a href="#process" class="hover:text-white transition-colors whitespace-nowrap shrink-0 hover:underline underline-offset-8 decoration-zinc-600" data-i18n="nav-process">Process</a>
+          <a href="#education" class="hover:text-white transition-colors whitespace-nowrap shrink-0 hover:underline underline-offset-8 decoration-zinc-600" data-i18n="nav-experience">Education</a>
+          <a href="#sandbox" class="hover:text-white transition-colors whitespace-nowrap shrink-0 hover:underline underline-offset-8 decoration-zinc-600" data-i18n="nav-sandbox">JS Engine</a>
+          <a href="#contact" class="hover:text-white transition-colors whitespace-nowrap shrink-0 hover:underline underline-offset-8 decoration-zinc-600" data-i18n="nav-contact">Contact</a>
+        </nav>
+
+        <!-- Zone 3: Primary Actions & Mobile/Tablet Hamburger -->
+        <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+          <!-- Theme Toggle (Dark / Light) -->
+          <button id="btn-theme-toggle" class="flex items-center justify-center p-2 text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-800 rounded-md transition-colors hover:border-zinc-700 cursor-pointer" title="Toggle Light / Dark Mode" aria-label="Toggle theme">
+            <!-- Moon icon (active in Dark Mode) -->
+            <svg id="theme-moon-icon" class="w-4 h-4 text-zinc-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <!-- Sun icon (active in Light Mode) -->
+            <svg id="theme-sun-icon" class="w-4 h-4 text-amber-500 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+
+          <!-- Language Toggle EN / Ã Â¦Â¬Ã Â¦Â¾Ã Â¦â€šÃ Â¦Â²Ã Â¦Â¾ -->
+          <button id="btn-toggle-lang" class="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-mono font-medium text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-800 rounded-md transition-colors hover:border-zinc-700 whitespace-nowrap cursor-pointer" title="Switch language">
+            <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span id="lang-indicator">Ã Â¦Â¬Ã Â¦Â¾Ã Â¦â€šÃ Â¦Â²Ã Â¦Â¾</span>
+          </button>
+
+          <!-- Primary CTA: Resume View & Print (Hidden on extra-small screens, accessible in drawer & >= sm) -->
+          <button id="btn-open-resume" class="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium text-zinc-950 bg-white hover:bg-zinc-200 rounded-md transition-all font-sans whitespace-nowrap shrink-0 shadow-sm cursor-pointer">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span data-i18n="btn-resume">Resume / CV</span>
+          </button>
+
+          <!-- Mobile & Tablet Hamburger Button (Visible on Mobile & Tablet < 1024px) -->
+          <button id="btn-mobile-menu" class="flex lg:hidden items-center justify-center p-2 text-zinc-200 hover:text-white bg-zinc-900 border border-zinc-800 rounded-md transition-colors hover:border-zinc-700 cursor-pointer" aria-label="Toggle navigation" aria-expanded="false">
+            <!-- Hamburger Icon (3 lines) -->
+            <svg id="hamburger-open-icon" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <!-- Close Icon (X) -->
+            <svg id="hamburger-close-icon" class="w-5 h-5 hidden text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile & Tablet Navigation Drawer (Visible on Mobile & Tablet < 1024px when toggled) -->
+      <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-zinc-800 bg-zinc-950/95 backdrop-blur-xl px-4 sm:px-8 md:px-12 pt-3 pb-5 space-y-4 shadow-2xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm font-medium">
+          <a href="#about" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 text-zinc-200 hover:text-white bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/70 rounded-lg transition-all">
+            <span data-i18n="nav-about">About</span>
+            <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="#projects" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 text-zinc-200 hover:text-white bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/70 rounded-lg transition-all">
+            <span data-i18n="nav-projects">Projects</span>
+            <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="#skills" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 text-zinc-200 hover:text-white bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/70 rounded-lg transition-all">
+            <span data-i18n="nav-skills">Skills</span>
+            <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="#services" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 text-zinc-200 hover:text-white bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/70 rounded-lg transition-all">
+            <span data-i18n="nav-services">Services</span>
+            <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="#process" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 text-zinc-200 hover:text-white bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/70 rounded-lg transition-all">
+            <span data-i18n="nav-process">Process</span>
+            <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="#education" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 text-zinc-200 hover:text-white bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/70 rounded-lg transition-all">
+            <span data-i18n="nav-experience">Education</span>
+            <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="#sandbox" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 text-zinc-200 hover:text-white bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/70 rounded-lg transition-all">
+            <span data-i18n="nav-sandbox">JS Engine</span>
+            <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="#contact" class="mobile-nav-link flex items-center justify-between px-3.5 py-2.5 text-zinc-200 hover:text-white bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/70 rounded-lg transition-all">
+            <span data-i18n="nav-contact">Contact</span>
+            <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Mobile/Tablet Drawer Footer CTA -->
+        <div class="pt-3 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex items-center gap-2 text-xs font-mono text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>Available for Projects</span>
+          </div>
+          <div class="flex items-center gap-2.5 w-full sm:w-auto">
+            <button id="btn-open-resume-mobile" class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-semibold text-zinc-950 bg-white hover:bg-zinc-200 rounded-lg transition-all cursor-pointer">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              <span data-i18n="btn-resume">Resume / CV</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main class="flex-1">
+      
+      <!-- HERO SECTION -->
+      <section id="about" class="pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-zinc-800/80">
+        <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Portrait Card: 1st on Mobile & Tablet (order-1), Right Column on Desktop (lg:order-2) -->
+            <div class="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
+              <div class="relative w-full max-w-md lg:max-w-lg">
+                <div class="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 shadow-2xl">
+                  <div class="aspect-square w-full bg-zinc-950 relative overflow-hidden group">
+                    <img src="/sohag_protfolio/assets/profile/p1.jpg?v=7" alt="Md. Sohag" referrerPolicy="no-referrer" class="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                      <div>
+                        <p id="portrait-name" class="text-white font-semibold text-lg">Md. Sohag</p>
+                        <p class="text-xs font-mono text-zinc-400">Full-Stack Software Engineer</p>
+                      </div>
+                      <div class="flex items-center gap-1.5 px-2.5 py-1 bg-zinc-900/90 border border-zinc-700/60 rounded-md text-xs font-mono text-emerald-400">
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Verified</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-5 border-t border-zinc-800/80 bg-zinc-900/60 space-y-3">
+                    <div class="flex items-center justify-between text-xs font-mono text-zinc-400">
+                      <span>SPECIALIZATION</span>
+                      <span class="text-zinc-200">Pure Web Architecture</span>
+                    </div>
+                    <div class="flex items-center justify-between text-xs font-mono text-zinc-400">
+                      <span>CORE STACK</span>
+                      <span class="text-zinc-200">JS ·· HTML5 ·· CSS3 ·· Node</span>
+                    </div>
+                    <div class="flex items-center justify-between text-xs font-mono text-zinc-400">
+                      <span>ENGAGEMENT</span>
+                      <span class="text-emerald-400 font-medium">Open to Contracts</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute -inset-1 rounded-2xl bg-indigo-500/10 blur-xl -z-10" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <!-- Typographic Hierarchy: 2nd on Mobile & Tablet (order-2), Left Column on Desktop (lg:order-1) -->
+            <div class="order-2 lg:order-1 lg:col-span-7 space-y-6">
+              <!-- Availability Kicker without pill box -->
+              <div class="flex items-center gap-2 text-xs font-mono text-indigo-400">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span id="hero-availability" class="font-semibold uppercase tracking-wider">AVAILABLE FOR HIGH-IMPACT ROLES & CONTRACTS</span>
+              </div>
+
+              <!-- Main Headline with balanced wrap -->
+              <h1 id="hero-headline" class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08] text-balance">
+                Crafting robust web systems & modern <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-300 to-indigo-200">digital experiences.</span>
+              </h1>
+
+              <!-- Role & Title -->
+              <p id="hero-title" class="text-lg sm:text-xl font-medium text-zinc-300">
+                Full-Stack Software Engineer & Web Architect
+              </p>
+
+              <!-- Bio Prose -->
+              <p id="hero-bio" class="text-base sm:text-lg text-zinc-400 leading-relaxed max-w-3xl">
+                Specializing in high-performance web applications, responsive user interfaces, and robust backend systems using pure modern JavaScript (ES6+), HTML5, CSS3, React, and Node.js.
+              </p>
+
+              <!-- Clean Unboxed Metadata -->
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-zinc-400 font-mono pt-1">
+                <span id="hero-location">Dhaka, Bangladesh ·· Remote Worldwide</span>
+                <span aria-hidden="true">/</span>
+                <span>Pure HTML5 ·· CSS3 ·· Modern JS</span>
+                <span aria-hidden="true">/</span>
+                <span>Node.js & Scalable Web APIs</span>
+              </div>
+
+              <!-- CTA Buttons -->
+              <div class="flex flex-wrap items-center gap-4 pt-4">
+                <a href="#projects" class="px-6 py-3 text-sm font-semibold text-zinc-950 bg-white hover:bg-zinc-200 rounded-lg transition-all shadow-sm flex items-center gap-2 group whitespace-nowrap">
+                  <span data-i18n="hero-btn-projects">Explore Featured Works</span>
+                  <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                </a>
+
+                <a href="#contact" class="px-6 py-3 text-sm font-semibold text-white bg-zinc-900 hover:bg-zinc-800 border border-zinc-700/80 rounded-lg transition-colors flex items-center gap-2 whitespace-nowrap">
+                  <svg class="w-4 h-4 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span data-i18n="hero-btn-contact">Get In Touch</span>
+                </a>
+
+                <button id="hero-btn-resume" class="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-900/60 rounded-lg transition-colors whitespace-nowrap" data-i18n="hero-btn-cv">
+                  View Full CV
+                </button>
+              </div>
+
+              <!-- Contact & Social shortcuts -->
+              <div class="flex flex-wrap items-center gap-6 pt-4 border-t border-zinc-900 text-sm text-zinc-400">
+                <button id="btn-copy-email-hero" class="flex items-center gap-2 hover:text-white transition-colors group cursor-pointer" title="Click to copy email">
+                  <svg id="copy-email-icon" class="w-4 h-4 text-zinc-500 group-hover:text-zinc-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span id="hero-email-text" class="font-mono text-xs">sohag209366@gmail.com</span>
+                  <span id="copy-email-feedback" class="text-xs text-emerald-400 font-mono hidden">Copied!</span>
+                </button>
+
+                <div class="flex flex-wrap items-center gap-2">
+                  <a id="hero-github-link" href="https://github.com/SOHAG-SHU" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono text-zinc-300 hover:text-white bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 rounded-lg transition-all shadow-sm" title="GitHub / SOHAG-SHU">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a id="hero-codeforces-link" href="https://codeforces.com/profile/Md_Sohag_Hossen." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono text-zinc-300 hover:text-white bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 rounded-lg transition-all shadow-sm" title="Codeforces / Md_Sohag_Hossen.">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24">
+                      <rect x="3" y="10" width="4.5" height="11" rx="1.2" fill="#F59E0B"/>
+                      <rect x="9.5" y="4" width="4.5" height="17" rx="1.2" fill="#3B82F6"/>
+                      <rect x="16" y="8" width="4.5" height="13" rx="1.2" fill="#EF4444"/>
+                    </svg>
+                    <span>Codeforces</span>
+                  </a>
+                  <a id="hero-facebook-link" href="https://www.facebook.com/md.sohag.hossen.279694" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono text-zinc-300 hover:text-white bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 rounded-lg transition-all shadow-sm" title="Facebook / md.sohag.hossen.279694">
+                    <svg class="w-3.5 h-3.5 fill-[#1877F2]" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <span>Facebook</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </section>
+
+      <!-- 01. PROJECTS SECTION -->
+      <section id="projects" class="py-16 lg:py-24 border-b border-zinc-800/80">
+        <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-12">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 text-xs font-mono text-indigo-400">
+                <span>PORTFOLIO REPERTOIRE</span>
+                <span aria-hidden="true">·</span>
+                <span>PRODUCTION CASE STUDIES</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-i18n="projects-heading">
+                Featured Engineering Projects
+              </h2>
+              <p class="text-sm sm:text-base lg:text-lg text-zinc-400 max-w-2xl" data-i18n="projects-sub">
+                Carefully crafted web applications built with rigorous testing, resilient data pipelines, and responsive design systems.
+              </p>
+            </div>
+
+            <!-- Segmented Category Filters -->
+            <div id="project-filters" class="flex flex-wrap items-center gap-1.5 p-1.5 rounded-xl bg-zinc-900 border border-zinc-800 self-start md:self-auto">
+              <button class="filter-btn active px-3.5 py-1.5 text-xs font-medium rounded-lg bg-zinc-800 text-white transition-colors cursor-pointer" data-category="All">All Projects</button>
+              <button class="filter-btn px-3.5 py-1.5 text-xs font-medium rounded-lg text-zinc-400 hover:text-white transition-colors cursor-pointer" data-category="Full-Stack">Full-Stack</button>
+              <button class="filter-btn px-3.5 py-1.5 text-xs font-medium rounded-lg text-zinc-400 hover:text-white transition-colors cursor-pointer" data-category="Frontend / UI">Frontend / UI</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Projects Grid -->
+          <div id="projects-grid" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Dynamically rendered by script -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 02. SKILLS SECTION -->
+      <section id="skills" class="py-16 lg:py-24 border-b border-zinc-800/80">
+        <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-12">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 text-xs font-mono text-indigo-400">
+                <span>TECHNICAL EXPERTISE</span>
+                <span aria-hidden="true">·</span>
+                <span>TOOLCHAIN & PROFICIENCIES</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-i18n="skills-heading">
+                Engineering Competencies
+              </h2>
+              <p class="text-sm sm:text-base lg:text-lg text-zinc-400 max-w-2xl" data-i18n="skills-sub">
+                Proficiencies developed across half a decade of hands-on production codebases, web architectures, and developer tooling.
+              </p>
+            </div>
+
+            <!-- Skill Filter / Search Input -->
+            <div class="relative w-full sm:w-72">
+              <input id="skill-search-input" type="text" placeholder="Filter tech or stack..." class="w-full px-4 py-2.5 pl-10 text-xs font-mono bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-200 placeholder:text-zinc-500 focus:outline-none focus:border-indigo-500 transition-colors" />
+              <svg class="w-4 h-4 text-zinc-500 absolute left-3.5 top-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+          </div>
+
+          <!-- Dynamic Skills Grid -->
+          <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            <!-- Dynamically populated via script -->
+          </div>
+
+          <!-- Quick badges -->
+          <div class="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <span class="text-xs font-mono text-zinc-400">DEVELOPER ECOSYSTEM & PLATFORMS:</span>
+            <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-300">
+              <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800/80 rounded">Git & GitHub</span>
+              <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800/80 rounded">Linux Bash</span>
+              <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800/80 rounded">REST APIs</span>
+              <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800/80 rounded">WebSockets</span>
+              <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800/80 rounded">CI/CD Automation</span>
+              <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800/80 rounded">Docker</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- 03. SERVICES & WHAT I OFFER -->
+      <section id="services" class="py-16 lg:py-24 border-b border-zinc-800/80 bg-zinc-950/40">
+        <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-16">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="space-y-3">
+              <div class="flex items-center gap-2 text-xs font-mono text-indigo-400">
+                <span>WHAT I DELIVER</span>
+                <span aria-hidden="true">·</span>
+                <span>PRODUCTION-READY SOLUTIONS</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-i18n="services-heading">
+                Services & What I Offer
+              </h2>
+              <p class="text-sm sm:text-base lg:text-lg text-zinc-400 max-w-2xl" data-i18n="services-sub">
+                Practical full-stack web solutions, custom user interfaces, reliable backend systems, and database engineering tailored to real-world business needs.
+              </p>
+            </div>
+            
+            <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-xs tracking-wide transition-all shadow-lg shadow-indigo-600/20 self-start md:self-auto">
+              <span>Discuss a Project</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Dynamic Services Grid -->
+          <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            <!-- Dynamically populated via script -->
+          </div>
+
+        </div>
+      </section>
+
+      
+      <!-- 04. MY ENGINEERING PROCESS -->
+      <section id="process" class="py-16 lg:py-24 border-b border-zinc-800/80">
+        <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-16">
+          
+          <div class="space-y-3">
+            <div class="flex items-center gap-2 text-xs font-mono text-indigo-400">
+              <span>WORKFLOW & METHODOLOGY</span>
+              <span aria-hidden="true">·</span>
+              <span>STRUCTURED DELIVERY</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-i18n="process-heading">
+              My Engineering Process
+            </h2>
+            <p class="text-sm sm:text-base lg:text-lg text-zinc-400 max-w-2xl" data-i18n="process-sub">
+              A disciplined four-stage software engineering lifecycle designed to eliminate technical debt, ensure cross-device polish, and deliver high-performance web systems.
+            </p>
+          </div>
+
+          <!-- Dynamic Process Steps Grid -->
+          <div id="process-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            <!-- Dynamically populated via script -->
+          </div>
+
+          <!-- Quick Process Quality Guarantee Strip -->
+          <div class="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-white">Quality & Reliability Commitment</p>
+                <p class="text-xs text-zinc-400">Strict code reviews, zero console errors, defensive error boundaries & verified performance.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-xs text-indigo-400 shrink-0">
+              <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800 rounded">100% Responsive</span>
+              <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800 rounded">95+ Lighthouse</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 05. EDUCATION & ACADEMIC JOURNEY -->
+      <section id="education" class="py-16 lg:py-24 border-b border-zinc-800/80">
+        <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-16">
+          
+          <div class="space-y-3">
+            <div class="flex items-center gap-2 text-xs font-mono text-indigo-400">
+              <span>ACADEMIC FOUNDATION</span>
+              <span aria-hidden="true">·</span>
+              <span>NETROKONA UNIVERSITY</span>
+              <span aria-hidden="true">·</span>
+              <span>SESSION 2021-2022</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-i18n="exp-heading">
+              Education & Academic Journey
+            </h2>
+            <p class="text-sm sm:text-base lg:text-lg text-zinc-400 max-w-2xl" data-i18n="exp-sub">
+              Formal Computer Science & Engineering undergraduate studies at Netrokona University (7th Semester), foundational coursework, lab systems, and algorithmic problem-solving.
+            </p>
+          </div>
+
+          <!-- Dynamic Experience Container -->
+          <div id="experience-container" class="space-y-6">
+            <!-- Rendered via script -->
+          </div>
+
+          <!-- Testimonials Grid -->
+          <div class="pt-8 border-t border-zinc-800/80 space-y-8">
+            <div class="space-y-1">
+              <div class="text-xs font-mono text-indigo-400">CORE COMPETENCY HIGHLIGHTS</div>
+              <h3 class="text-2xl font-bold text-white tracking-tight">Academic & Engineering Strengths</h3>
+            </div>
+            <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- Rendered via script -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 04. IN-BROWSER PURE JAVASCRIPT ENGINE / SANDBOX -->
+      <section id="sandbox" class="py-16 lg:py-24 border-b border-zinc-800/80 bg-zinc-950">
+        <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-10">
+          
+          <div class="space-y-3">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white" data-i18n="sandbox-heading">
+              Live JavaScript Engine & Lab
+            </h2>
+            <p class="text-sm sm:text-base text-zinc-400 max-w-2xl" data-i18n="sandbox-sub">
+              Evaluate real JavaScript logic directly in your browser. Choose an algorithmic pattern or edit custom JS to test output in real time.
+            </p>
+          </div>
+
+          <!-- Snippet Selection Buttons -->
+          <div id="snippet-buttons" class="flex flex-wrap items-center gap-2">
+            <!-- Populated via script -->
+          </div>
+
+          <!-- Code Editor & Live Terminal Output -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            
+            <!-- Code Editor Box -->
+            <div class="lg:col-span-7 rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden flex flex-col justify-between">
+              <div class="flex items-center justify-between px-4 py-3 bg-zinc-950/70 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-1.5">
+                    <div class="w-2.5 h-2.5 rounded-full bg-zinc-700"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-zinc-700"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-zinc-700"></div>
+                  </div>
+                  <span class="text-xs font-mono text-zinc-400 ml-2">sandbox.js</span>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <button id="btn-reset-code" class="p-1.5 text-zinc-400 hover:text-white transition-colors" title="Reset script">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                  </button>
+                  <button id="btn-run-code" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium text-zinc-950 bg-emerald-400 hover:bg-emerald-300 rounded-md transition-colors font-semibold cursor-pointer">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Run Script</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="p-4 flex-1">
+                <textarea id="sandbox-textarea" spellcheck="false" class="w-full h-80 sm:h-96 font-mono text-xs sm:text-sm text-zinc-200 bg-transparent resize-none focus:outline-none leading-relaxed"></textarea>
+              </div>
+
+              <div class="px-4 py-2.5 bg-zinc-950/40 border-t border-zinc-800/80 text-xs font-mono text-zinc-500 flex items-center justify-between">
+                <span>Pure Client ES6+ Sandbox</span>
+                <span id="snippet-desc-footer" class="text-zinc-400 truncate max-w-xs sm:max-w-md"></span>
+              </div>
+            </div>
+
+            <!-- Console Output Box -->
+            <div class="lg:col-span-5 rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden flex flex-col justify-between">
+              <div class="flex items-center justify-between px-4 py-3 bg-zinc-950/70 border-b border-zinc-800">
+                <div class="flex items-center gap-2 text-xs font-mono text-zinc-400">
+                  <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                  <span>Console Standard Output</span>
+                </div>
+                <div id="sandbox-perf-indicator" class="text-xs font-mono text-emerald-400"></div>
+              </div>
+
+              <div id="sandbox-terminal" class="p-4 flex-1 bg-zinc-950 font-mono text-xs overflow-y-auto space-y-2 h-80 sm:h-96">
+                <!-- Terminal logs -->
+              </div>
+
+              <div class="px-4 py-2.5 bg-zinc-950/40 border-t border-zinc-800/80 text-xs font-mono text-zinc-500 flex items-center justify-between">
+                <span id="terminal-count-status">stdout · 0 entries</span>
+                <button id="btn-clear-terminal" class="text-zinc-400 hover:text-white transition-colors cursor-pointer">Clear</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 05. CONTACT SECTION -->
+      <section id="contact" class="py-16 lg:py-24 border-b border-zinc-800/80">
+        <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-12">
+          
+          <div class="space-y-3">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white" data-i18n="contact-heading">
+              Get In Touch
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            
+            <!-- Direct Info -->
+            <div class="lg:col-span-5 flex flex-col h-full">
+              <div class="h-full p-6 sm:p-8 rounded-2xl bg-zinc-900/60 border border-zinc-800 flex flex-col justify-between space-y-6">
+                <h3 class="text-base font-semibold text-white">Direct Communication</h3>
+                <div class="space-y-4 text-sm">
+                  
+                  <div class="flex items-start justify-between gap-3 p-3 rounded-lg bg-zinc-950 border border-zinc-850">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-4 h-4 text-indigo-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                      <div>
+                        <div class="text-xs font-mono text-zinc-400">EMAIL ADDRESS</div>
+                        <div id="contact-email-text" class="text-white font-mono text-xs sm:text-sm font-medium">sohag209366@gmail.com</div>
+                      </div>
+                    </div>
+                    <button id="btn-copy-email-contact" class="p-1.5 text-zinc-400 hover:text-white transition-colors cursor-pointer" title="Copy email">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    </button>
+                  </div>
+
+                  <div class="flex items-center gap-3 p-3 rounded-lg bg-zinc-950 border border-zinc-850">
+                    <svg class="w-4 h-4 text-indigo-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <div>
+                      <div class="text-xs font-mono text-zinc-400">LOCATION & TIMEZONE</div>
+                      <div id="contact-location-text" class="text-white text-xs sm:text-sm font-medium">Netrokona, Bangladesh (UTC+6)</div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-3 p-3 rounded-lg bg-zinc-950 border border-zinc-850">
+                    <svg class="w-4 h-4 text-indigo-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <div>
+                      <div class="text-xs font-mono text-zinc-400">RESPONSE TIME</div>
+                      <div class="text-white text-xs sm:text-sm font-medium">Within 12 hours guaranteed</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="pt-2 text-xs font-mono text-emerald-400 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span id="contact-availability-text">Open to freelance contracts & full-time roles</span>
+                </div>
+
+                <!-- Single Clean CONNECT & PROFILES block -->
+                <div class="pt-4 border-t border-zinc-800/80 space-y-2">
+                  <div class="text-xs font-mono text-zinc-400">CONNECT & PROFILES</div>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                    <a href="https://github.com/SOHAG-SHU" target="_blank" rel="noreferrer" class="flex items-center gap-2 px-3 py-2 text-xs font-mono text-zinc-300 hover:text-white bg-zinc-950 hover:bg-zinc-800 border border-zinc-800 rounded-lg transition-colors">
+                      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://codeforces.com/profile/Md_Sohag_Hossen." target="_blank" rel="noreferrer" class="flex items-center gap-2 px-3 py-2 text-xs font-mono text-zinc-300 hover:text-white bg-zinc-950 hover:bg-zinc-800 border border-zinc-800 rounded-lg transition-colors">
+                      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24">
+                        <rect x="3" y="10" width="4.5" height="11" rx="1.2" fill="#F59E0B"/>
+                        <rect x="9.5" y="4" width="4.5" height="17" rx="1.2" fill="#3B82F6"/>
+                        <rect x="16" y="8" width="4.5" height="13" rx="1.2" fill="#EF4444"/>
+                      </svg>
+                      <span>Codeforces</span>
+                    </a>
+                    <a href="https://www.facebook.com/md.sohag.hossen.279694" target="_blank" rel="noreferrer" class="flex items-center gap-2 px-3 py-2 text-xs font-mono text-zinc-300 hover:text-white bg-zinc-950 hover:bg-zinc-800 border border-zinc-800 rounded-lg transition-colors">
+                      <svg class="w-3.5 h-3.5 fill-[#1877F2]" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                      <span>Facebook</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-7 flex flex-col h-full">
+              <div class="h-full p-6 sm:p-8 rounded-2xl bg-zinc-900/60 border border-zinc-800 flex flex-col justify-between space-y-6">
+                
+                <div id="contact-success-banner" class="hidden my-auto p-6 sm:p-8 rounded-xl bg-indigo-950/40 border border-indigo-500/40 space-y-5 text-center">
+                  <div class="w-14 h-14 mx-auto rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  </div>
+                  <div class="space-y-2 max-w-md mx-auto">
+                    <h4 id="success-banner-title" class="text-lg font-bold text-white tracking-tight">Gmail Compose Opened!</h4>
+                    <p id="success-banner-desc" class="text-xs font-mono text-zinc-300 leading-relaxed">
+                      Your message has been pre-filled for <span class="text-indigo-400 font-semibold">sohag209366@gmail.com</span> in a new tab. Simply hit <strong class="text-white">"Send"</strong> in Gmail!
+                    </p>
+                  </div>
+                  <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+                    <a id="btn-reopen-gmail" href="#" target="_blank" class="px-5 py-2.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-colors flex items-center gap-2 cursor-pointer shadow-lg shadow-indigo-600/20">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                      <span>Open in Gmail Again</span>
+                    </a>
+                    <button id="btn-copy-inquiry" type="button" class="px-4 py-2.5 text-xs font-medium text-zinc-300 hover:text-white bg-zinc-950 border border-zinc-800 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer">
+                      <svg class="w-3.5 h-3.5 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                      <span id="btn-copy-inquiry-text">Copy Text</span>
+                    </button>
+                    <button id="btn-send-another" type="button" class="px-4 py-2.5 text-xs font-medium text-zinc-400 hover:text-white transition-colors cursor-pointer">
+                      Compose Another
+                    </button>
+                  </div>
+                </div>
+
+                <form id="contact-form" class="space-y-4 flex-1 flex flex-col justify-between">
+                  <div class="space-y-4 flex-1 flex flex-col">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div class="space-y-1.5">
+                        <label class="text-xs font-mono text-zinc-400">YOUR FULL NAME</label>
+                        <input id="input-contact-name" type="text" required placeholder="e.g. Md.Sohag Hossen" class="w-full px-4 py-2.5 text-xs font-mono bg-zinc-950 border border-zinc-800 rounded-lg text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors" />
+                      </div>
+                      <div class="space-y-1.5">
+                        <label class="text-xs font-mono text-zinc-400">YOUR EMAIL</label>
+                        <input id="input-contact-email" type="email" required placeholder="e.g. sohag209366@gmail.com" class="w-full px-4 py-2.5 text-xs font-mono bg-zinc-950 border border-zinc-800 rounded-lg text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors" />
+                      </div>
+                    </div>
+
+                    <div class="space-y-1.5">
+                      <label class="text-xs font-mono text-zinc-400">SUBJECT / PROJECT TYPE</label>
+                      <input id="input-contact-subject" type="text" required placeholder="e.g. Full-Stack Web Platform Architecture" class="w-full px-4 py-2.5 text-xs font-mono bg-zinc-950 border border-zinc-800 rounded-lg text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors" />
+                    </div>
+
+                    <div class="space-y-1.5 flex-1 flex flex-col">
+                      <label class="text-xs font-mono text-zinc-400">PROJECT OVERVIEW OR MESSAGE</label>
+                      <textarea id="input-contact-message" required placeholder="Briefly describe your requirements,timelines or role details..." class="w-full flex-1 min-h-[110px] px-4 py-2.5 text-xs font-mono bg-zinc-950 border border-zinc-800 rounded-lg text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors resize-none"></textarea>
+                    </div>
+                  </div>
+
+                  <button id="btn-submit-contact" type="submit" class="w-full py-3 px-4 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-indigo-600/20 mt-2">
+                    <span>Send Message via Gmail</span>
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  </button>
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-zinc-800/80 bg-zinc-950 text-xs text-zinc-400">
+      <div class="w-full max-w-[1680px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 space-y-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-3">
+            <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 7c0-2-1.8-3.5-4-3.5H9C6.8 3.5 5 5.3 5 7.5c0 2.2 1.8 3.5 4.5 3.5h5c2.7 0 4.5 1.3 4.5 3.5 0 2.2-1.8 4-4 4h-4.5c-2.2 0-4-1.8-4-3.5" />
+              </svg>
+            </div>
+            <div class="space-y-0.5 text-left">
+              <p class="font-mono text-zinc-200 font-semibold text-sm flex items-center gap-2">
+                <span id="footer-name">Md. Sohag Hossen</span>
+                <span class="text-zinc-600">/</span>
+                <span class="text-xs text-zinc-400 font-normal">Full-Stack Engineer</span>
+              </p>
+              <p class="text-zinc-500 text-[11px]">
+                &copy; <span id="current-year">2026</span> Md. Sohag Hossen. All rights reserved.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-xs text-zinc-400">
+            <a href="#about" class="hover:text-white transition-colors">About</a>
+            <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+            <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+              <a href="#services" class="hover:text-white transition-colors">Services</a>
+              <a href="#process" class="hover:text-white transition-colors">Process</a>
+            <a href="#education" class="hover:text-white transition-colors">Education</a>
+            <a href="#sandbox" class="hover:text-white transition-colors">JS Engine</a>
+            <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="font-mono text-zinc-400 hidden sm:block">
+              Dhaka, BD: <span id="dhaka-clock" class="text-zinc-200 tabular-nums">--:--:--</span>
+            </div>
+            <button id="btn-back-to-top" class="p-2 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white rounded-lg transition-colors cursor-pointer" title="Back to top" aria-label="Back to top">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL 1: PROJECT CASE STUDY & ARCHITECTURE -->
+    <div id="modal-project" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-zinc-950/80 backdrop-blur-md overflow-y-auto">
+      <div id="modal-project-backdrop" class="fixed inset-0 -z-10"></div>
+      <div class="relative w-full max-w-4xl bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl overflow-hidden my-auto">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-zinc-800 bg-zinc-950/60">
+          <div id="modal-project-meta" class="flex items-center gap-2 text-xs font-mono text-zinc-400"></div>
+          <button id="modal-project-close" class="p-1.5 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors cursor-pointer">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div class="p-6 sm:p-8 space-y-6 max-h-[75vh] overflow-y-auto">
+          <div class="aspect-video w-full rounded-xl overflow-hidden bg-zinc-950 border border-zinc-800">
+            <img id="modal-project-img" src="" alt="Project Preview" class="w-full h-full object-cover" />
+          </div>
+          <div class="space-y-2">
+            <h3 id="modal-project-title" class="text-2xl font-bold text-white tracking-tight"></h3>
+            <p id="modal-project-desc" class="text-sm text-zinc-300 leading-relaxed"></p>
+          </div>
+          <div class="p-4 rounded-xl bg-indigo-950/30 border border-indigo-500/30 flex items-start gap-3">
+            <span class="text-indigo-400 font-mono font-bold text-base">Impact:</span>
+            <span id="modal-project-impact" class="text-sm font-medium text-zinc-200"></span>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-sm font-semibold text-white">System Architecture & Engineering Highlights</h4>
+            <ul id="modal-project-notes" class="space-y-2 text-xs sm:text-sm text-zinc-300"></ul>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-sm font-semibold text-white">Verified Metrics & Benchmarks</h4>
+            <div id="modal-project-metrics" class="grid grid-cols-2 sm:grid-cols-3 gap-3"></div>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-sm font-semibold text-white">Core Technology Stack</h4>
+            <div id="modal-project-stack" class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between px-6 py-4 border-t border-zinc-800 bg-zinc-950/80">
+          <button id="modal-project-close-btn" class="px-4 py-2 text-xs font-medium text-zinc-400 hover:text-white transition-colors cursor-pointer">Close</button>
+          <div class="flex items-center gap-3">
+            <a id="modal-project-source" href="#" target="_blank" rel="noreferrer" class="flex items-center gap-2 px-4 py-2 text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800 hover:bg-zinc-700 rounded-lg transition-colors">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>View Source</span>
+            </a>
+            <a id="modal-project-live" href="#" target="_blank" rel="noreferrer" class="flex items-center gap-2 px-4 py-2 text-xs font-medium text-zinc-950 bg-white hover:bg-zinc-200 rounded-lg transition-colors font-semibold">
+              <span>Launch Live Demo</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 2: PRINTABLE RESUME / CV -->
+    <div id="modal-resume" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-zinc-950/85 backdrop-blur-md overflow-y-auto">
+      <div id="modal-resume-backdrop" class="fixed inset-0 -z-10"></div>
+      <div class="relative w-full max-w-4xl bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl overflow-hidden my-auto">
+        <div class="print:hidden flex items-center justify-between px-6 py-4 border-b border-zinc-800 bg-zinc-950/80">
+          <div class="flex items-center gap-2 text-xs font-mono text-zinc-400">
+            <span>CURRICULUM VITAE</span>
+            <span aria-hidden="true">·</span>
+            <span class="text-emerald-400 font-medium">PRINT READY</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <button id="btn-copy-resume-text" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800 hover:bg-zinc-700 rounded-lg transition-colors cursor-pointer">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span id="copy-resume-label">Copy Text</span>
+            </button>
+            <button id="btn-print-resume" class="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium text-zinc-950 bg-white hover:bg-zinc-200 rounded-lg transition-colors font-semibold cursor-pointer">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              <span>Print / Save PDF</span>
+            </button>
+            <button id="modal-resume-close" class="p-1.5 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors ml-2 cursor-pointer">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+        </div>
+        <div id="resume-sheet" class="max-h-[82vh] overflow-y-auto p-6 sm:p-10 bg-zinc-950 text-zinc-200 space-y-8 font-sans print:p-0 print:text-black print:bg-white print:max-h-none print:overflow-visible">
+          <!-- Populated by script -->
+        </div>
+      </div>
+    </div>
+
+    <!-- PURE JAVASCRIPT APP INITIALIZATION SCRIPT -->
+  </body>
+</html>
