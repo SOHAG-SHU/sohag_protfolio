@@ -195,7 +195,7 @@ function renderProjects() {
             <img src="${resolveAsset(project.image)}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"></div>
             <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-              <span class="px-3 py-1.5 text-xs font-mono font-medium text-white bg-zinc-900/90 border border-zinc-700 rounded-md backdrop-blur-sm flex items-center gap-1.5 shadow-lg">
+              <span class="px-3 py-1.5 text-xs font-mono font-medium text-white bg-zinc-900 border border-zinc-700 rounded-md flex items-center gap-1.5 shadow-lg">
                 <span>Inspect Architecture</span>
                 <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </span>

@@ -9,15 +9,8 @@
   
   body {
     font-family: var(--font-body);
-    transition: background-color 0.3s ease, color 0.3s ease;
     background-color: #09090b;
-    background-image: 
-      radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.14) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
-      radial-gradient(at 50% 50%, rgba(168, 85, 247, 0.08) 0px, transparent 60%),
-      radial-gradient(at 0% 100%, rgba(56, 189, 248, 0.10) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.12) 0px, transparent 50%);
-    background-attachment: fixed;
+    color: #f4f4f5;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -68,14 +61,8 @@ html.light ::-webkit-scrollbar-thumb:hover {
 
 /* Body & Backgrounds */
 html.light body {
-  background-color: #fafafa !important;
+  background-color: #f8fafc !important;
   color: #0f172a !important;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.06) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.06) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(168, 85, 247, 0.04) 0px, transparent 60%),
-    radial-gradient(at 0% 100%, rgba(56, 189, 248, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.06) 0px, transparent 50%) !important;
 }
 
 /* Global Light Surface Conversions */
@@ -151,25 +138,16 @@ html.light .text-amber-400 {
   color: #d97706 !important;
 }
 
-/* Header & Navigation Bar (Deep Luminous Royal Blue & Indigo Glass Gradient) */
+/* Header & Navigation Bar (Clean High-Performance Navigation) */
 html.light header {
-  background: linear-gradient(90deg, 
-    rgba(219, 234, 254, 0.98) 0%, 
-    rgba(224, 231, 255, 0.97) 50%, 
-    rgba(237, 233, 254, 0.98) 100%
-  ) !important;
-  backdrop-filter: blur(12px) !important;
-  border-bottom: 2px solid rgba(165, 180, 252, 0.85) !important;
-  box-shadow: 
-    inset 0 -1px 0 rgba(255, 255, 255, 0.8),
-    0 4px 24px -2px rgba(79, 70, 229, 0.18),
-    0 2px 8px -1px rgba(14, 165, 233, 0.10) !important;
+  background: #ffffff !important;
+  border-bottom: 1.5px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
 }
 
 html.light header .bg-zinc-950\/85 {
-  background: rgba(255, 255, 255, 0.94) !important;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.16) !important;
-  border: 1.5px solid rgba(165, 180, 252, 0.9) !important;
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
 }
 
 html.light #nav-brand-name {
@@ -200,10 +178,9 @@ html.light nav a:hover {
 }
 
 html.light #mobile-nav-drawer {
-  background: linear-gradient(180deg, rgba(224, 231, 255, 0.98) 0%, rgba(219, 234, 254, 0.98) 100%) !important;
-  backdrop-filter: blur(12px) !important;
-  border-bottom: 2px solid rgba(165, 180, 252, 0.9) !important;
-  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.18) !important;
+  background: #ffffff !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
 }
 
 html.light .mobile-nav-link {
@@ -251,14 +228,9 @@ html.light #btn-open-resume-mobile:hover {
   box-shadow: 0 6px 16px rgba(49, 46, 129, 0.45) !important;
 }
 
-/* Hero Section (Rich Deep Indigo, Sapphire & Amethyst Multi-Layer Gradient) */
+/* Hero Section (Clean High-Performance Indigo & Sky Gradient) */
 html.light #about {
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.35) 0%, transparent 45%),
-    radial-gradient(circle at 90% 12%, rgba(14, 165, 233, 0.32) 0%, transparent 45%),
-    radial-gradient(circle at 50% 85%, rgba(168, 85, 247, 0.26) 0%, transparent 50%),
-    radial-gradient(circle at 75% 65%, rgba(244, 114, 182, 0.22) 0%, transparent 42%),
-    linear-gradient(135deg, #c7d2fe 0%, #dbeafe 30%, #e0e7ff 65%, #ede9fe 100%) !important;
+  background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 45%, #ede9fe 100%) !important;
   border-bottom: 2px solid rgba(165, 180, 252, 0.85) !important;
   position: relative;
 }
@@ -416,13 +388,9 @@ html.light #btn-copy-email-hero:hover {
   color: #4f46e5 !important;
 }
 
-/* Projects Section (Dynamic Cyan & Indigo Aurora Gradient) */
+/* Projects Section (Clean High-Performance Slate & Sky Gradient) */
 html.light #projects {
-  background: 
-    radial-gradient(circle at 90% 12%, rgba(14, 165, 233, 0.18) 0%, transparent 45%),
-    radial-gradient(circle at 10% 85%, rgba(99, 102, 241, 0.18) 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.12) 0%, transparent 55%),
-    linear-gradient(180deg, #f8fafc 0%, #f0f9ff 35%, #eef2ff 75%, #f8fafc 100%) !important;
+  background: linear-gradient(180deg, #f8fafc 0%, #f0f9ff 50%, #f8fafc 100%) !important;
   border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
   position: relative;
 }
@@ -460,13 +428,9 @@ html.light .filter-btn.active {
   box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
 }
 
-/* Skills Section (Fresh Emerald & Indigo Tech Gradient) */
+/* Skills Section (Clean High-Performance Emerald Gradient) */
 html.light #skills {
-  background: 
-    radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.16) 0%, transparent 45%),
-    radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.16) 0%, transparent 50%),
-    radial-gradient(circle at 50% 10%, rgba(14, 165, 233, 0.14) 0%, transparent 50%),
-    linear-gradient(135deg, #f8fafc 0%, #ecfdf5 30%, #f0f9ff 70%, #f5f3ff 100%) !important;
+  background: linear-gradient(180deg, #f0fdf4 0%, #f8fafc 50%, #f0fdf4 100%) !important;
   border-bottom: 1px solid rgba(167, 243, 208, 0.7) !important;
   position: relative;
 }
@@ -499,12 +463,9 @@ html.light #skills .h-1\.5.w-full.bg-zinc-800 > div {
   background: linear-gradient(90deg, #4f46e5 0%, #0284c7 50%, #10b981 100%) !important;
 }
 
-/* Services Section (Flowing Violet & Indigo Gradient) */
+/* Services Section (Clean High-Performance Violet Gradient) */
 html.light #services {
-  background: 
-    radial-gradient(circle at 85% 15%, rgba(99, 102, 241, 0.16) 0%, transparent 45%),
-    radial-gradient(circle at 15% 85%, rgba(244, 114, 182, 0.12) 0%, transparent 45%),
-    linear-gradient(180deg, #f5f3ff 0%, #eef2ff 50%, #f8fafc 100%) !important;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 50%, #f8fafc 100%) !important;
   border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
 }
 
@@ -515,12 +476,9 @@ html.light #services .rounded-2xl {
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
-/* Process Section (Cyan & Indigo Tech Gradient) */
+/* Process Section (Clean High-Performance Cyan Gradient) */
 html.light #process {
-  background: 
-    radial-gradient(circle at 10% 25%, rgba(14, 165, 233, 0.16) 0%, transparent 45%),
-    radial-gradient(circle at 90% 75%, rgba(99, 102, 241, 0.16) 0%, transparent 45%),
-    linear-gradient(135deg, #f8fafc 0%, #f0f9ff 40%, #eef2ff 80%, #faf5ff 100%) !important;
+  background: linear-gradient(180deg, #f8fafc 0%, #f0f9ff 50%, #f8fafc 100%) !important;
   border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
 }
 
@@ -531,13 +489,10 @@ html.light #process .rounded-2xl {
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
-/* Education Section (Purple & Lavender Graduate Gradient) */
+/* Education Section (Clean High-Performance Lavender Gradient) */
 html.light #education,
 html.light #experience {
-  background: 
-    radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.16) 0%, transparent 50%),
-    radial-gradient(circle at 15% 85%, rgba(99, 102, 241, 0.16) 0%, transparent 50%),
-    linear-gradient(180deg, #faf5ff 0%, #eef2ff 45%, #f8fafc 100%) !important;
+  background: linear-gradient(180deg, #faf5ff 0%, #eef2ff 50%, #f8fafc 100%) !important;
   border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
 }
 
@@ -550,13 +505,9 @@ html.light #testimonials-grid .rounded-2xl {
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
-/* JS Engine & Sandbox Section (Luminous Cyber-Lab Gradient) */
+/* JS Engine & Sandbox Section (Clean High-Performance Cyber-Lab Gradient) */
 html.light #sandbox {
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.20) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.18) 0%, transparent 45%),
-    radial-gradient(circle at 50% 10%, rgba(14, 165, 233, 0.18) 0%, transparent 50%),
-    linear-gradient(135deg, #eef2ff 0%, #f0fdf4 35%, #f0f9ff 70%, #f5f3ff 100%) !important;
+  background: linear-gradient(180deg, #eef2ff 0%, #f0fdf4 50%, #f5f3ff 100%) !important;
   border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
   position: relative;
 }
@@ -624,13 +575,9 @@ html.light #btn-run-code * {
   color: #ffffff !important;
 }
 
-/* Contact Section (Deep Indigo & Sky Aurora Gradient) */
+/* Contact Section (Clean High-Performance Indigo & Sky Gradient) */
 html.light #contact {
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 90% 80%, rgba(14, 165, 233, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.16) 0%, transparent 55%),
-    linear-gradient(135deg, #f8fafc 0%, #eef2ff 30%, #f0f9ff 70%, #faf5ff 100%) !important;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 50%, #faf5ff 100%) !important;
   border-bottom: 1px solid rgba(199, 210, 254, 0.7) !important;
   position: relative;
 }
@@ -747,8 +694,7 @@ html.light footer .bg-indigo-500\/10 {
 /* Modals & Inspection Popups (Crystal Clear Contrast & High-Tech Typography) */
 html.light #modal-project,
 html.light #modal-resume {
-  background-color: rgba(15, 23, 42, 0.65) !important;
-  backdrop-filter: blur(8px) !important;
+  background-color: rgba(15, 23, 42, 0.75) !important;
 }
 
 html.light #modal-project .bg-zinc-900,
