@@ -276,9 +276,9 @@ function openProjectModal(project) {
   if (metricsContainer) {
     metricsContainer.innerHTML = project.metrics.map(
       (m) => `
-        <div class="p-4 rounded-xl bg-zinc-950/50 border border-zinc-800/80 space-y-1">
-          <div class="text-xs font-mono text-zinc-400">${m.label}</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums">${m.value}</div>
+        <div class="p-4 rounded-xl bg-zinc-950/50 border border-zinc-800/80 space-y-1 project-metric-card">
+          <div class="text-xs font-mono text-zinc-400 project-metric-label">${m.label}</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums project-metric-value">${m.value}</div>
         </div>
       `
     ).join("");
