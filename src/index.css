@@ -37,6 +37,20 @@ header {
   z-index: 50 !important;
 }
 
+/* Ensure mobile menu button is always visible below 1024px */
+@media (max-width: 1023px) {
+  #btn-mobile-menu {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+@media (min-width: 1024px) {
+  #btn-mobile-menu {
+    display: none !important;
+  }
+}
+
 /* Custom subtle scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
