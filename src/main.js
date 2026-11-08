@@ -187,23 +187,22 @@ function renderProjects() {
   const container = document.getElementById("projects-grid");
   if (!container) return;
   const filtered = selectedCategory === "All" ? projectsData : projectsData.filter((p) => p.category === selectedCategory);
-  container.innerHTML = filtered.map((project, idx) => {
-    const isLarge = idx === 0 && selectedCategory === "All";
+  container.innerHTML = filtered.map((project) => {
     return `
-        <div class="group rounded-2xl bg-zinc-900/70 border border-zinc-800 hover:border-zinc-700 transition-all overflow-hidden flex flex-col justify-between ${isLarge ? "lg:col-span-12 xl:flex-row" : "lg:col-span-6"}">
-          <div class="w-full overflow-hidden bg-zinc-950 relative cursor-pointer project-card-media ${isLarge ? "xl:w-7/12 aspect-[16/10] sm:aspect-[16/9]" : "aspect-video"}" data-project-id="${project.id}">
+        <div class="group rounded-2xl bg-zinc-900/70 border border-zinc-800 hover:border-zinc-700 transition-all overflow-hidden flex flex-col justify-between">
+          <div class="w-full overflow-hidden bg-zinc-950 relative cursor-pointer project-card-media aspect-video" data-project-id="${project.id}">
             <img src="${resolveAsset(project.image)}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-              <span class="px-3 py-1.5 text-xs font-mono font-medium text-white bg-zinc-900 border border-zinc-700 rounded-md flex items-center gap-1.5 shadow-lg">
-                <span>Inspect Architecture</span>
+            <div class="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="px-2.5 py-1 text-xs font-mono font-medium text-white bg-zinc-900 border border-zinc-700 rounded-md flex items-center gap-1.5 shadow-lg">
+                <span>Inspect</span>
                 <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </span>
             </div>
           </div>
 
-          <div class="p-6 sm:p-8 md:p-10 flex-1 flex flex-col justify-between space-y-6 ${isLarge ? "xl:w-5/12" : ""}">
-            <div class="space-y-3">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2.5">
               <div class="flex items-center gap-2 text-xs font-mono text-zinc-400">
                 <span>${project.category}</span>
                 <span aria-hidden="true">\xB7</span>
@@ -211,31 +210,32 @@ function renderProjects() {
                 <span aria-hidden="true">\xB7</span>
                 <span class="text-indigo-400 font-medium">${project.role}</span>
               </div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors cursor-pointer project-card-title" data-project-id="${project.id}">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-indigo-300 transition-colors cursor-pointer project-card-title line-clamp-1" data-project-id="${project.id}">
                 ${project.title}
               </h3>
-              <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+              <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed line-clamp-2">
                 ${project.description}
               </p>
-              <div class="pt-2 text-xs sm:text-sm font-medium text-zinc-200 flex items-start gap-2">
+              <div class="pt-1 text-xs font-medium text-zinc-200 flex items-start gap-1.5">
                 <span class="text-emerald-400 font-mono font-semibold">\u2713</span>
-                <span>${project.impact}</span>
+                <span class="line-clamp-1">${project.impact}</span>
               </div>
             </div>
 
-            <div class="pt-4 border-t border-zinc-800/80 space-y-4">
-              <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
-                ${project.technologies.map(
-      (tech) => `<span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800 rounded text-zinc-300">${tech}</span>`
+            <div class="pt-3 border-t border-zinc-800/80 space-y-3.5">
+              <div class="flex flex-wrap gap-1.5 text-xs font-mono text-zinc-400">
+                ${project.technologies.slice(0, 4).map(
+      (tech) => `<span class="px-2 py-0.5 bg-zinc-950 border border-zinc-800 rounded text-zinc-300 text-[11px]">${tech}</span>`
     ).join("")}
+                ${project.technologies.length > 4 ? `<span class="px-1.5 py-0.5 text-zinc-500 text-[11px]">+${project.technologies.length - 4}</span>` : ""}
               </div>
 
-              <div class="flex items-center justify-between gap-3 pt-2">
+              <div class="flex items-center justify-between gap-2 pt-1">
                 <button class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1.5 project-card-details-btn cursor-pointer" data-project-id="${project.id}">
-                  <span>${currentLang === "en" ? "Deep-Dive Case Study" : "\u09AC\u09BF\u09B8\u09CD\u09A4\u09BE\u09B0\u09BF\u09A4 \u0995\u09C7\u09B8 \u09B8\u09CD\u099F\u09BE\u09A1\u09BF"}</span>
+                  <span>${currentLang === "en" ? "Case Study" : "\u0995\u09C7\u09B8 \u09B8\u09CD\u099F\u09BE\u09A1\u09BF"}</span>
                   <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </button>
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2">
                   <a href="${project.githubUrl}" target="_blank" rel="noreferrer" class="p-1.5 text-zinc-400 hover:text-white transition-colors" title="View Source">
                     <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                   </a>
